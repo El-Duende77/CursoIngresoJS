@@ -6,12 +6,19 @@ en el cuadro de texto "RESULTADO"*/
 function mostrarAumento()
 {
 	var importe;
-	var descuento;
+
 	var resultado;
+	var porcentaje;
+	
+	porcentaje = prompt("Ingrese un porcentaje");
+
+	porcentaje = parseInt(porcentaje);
 
 	importe = parseInt(document.getElementById("txtIdImporte").value);
 
-	descuento =  importe * 0.25;
-	resultado = importe - descuento;
-	document.getElementById("txtIdResultado").value = resultado;
+	 
+
+	resultado = importe - (importe * porcentaje / 100);
+
+	document.getElementById("txtIdResultado").value =  resultado;
 }
