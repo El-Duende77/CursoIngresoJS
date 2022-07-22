@@ -11,11 +11,18 @@ var numeroSecreto;
 var contadorIntentos;
 
 function comenzar()
-{
-	//Genero el número RANDOM entre 1 y 100
-	 
-		//alert(numeroSecreto );
-	
+{   var numeroSecreto;    /*Genero el número RANDOM entre 1 y 100*/
+    var contadorIntentos;
+    var numero;	   /*alert(numeroSecreto );*/
+
+    numeroSecreto = document.getElementById("txtIdNumero").value;
+    numeroSecreto = parseInt(numeroSecreto);
+
+    contadorIntentos = document.getElementById("txtIdIntentos").value;
+    contadorIntentos = parseInt(contadorIntentos);
+  
+    numero=math.floor(Math.random()*(100-1))+1;
+  
 
 }
 

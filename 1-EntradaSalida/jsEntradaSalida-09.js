@@ -1,28 +1,43 @@
-/*
-Ejercicio 9 bis
 
-Debemos lograr tomar el importe por ID ,
+//Ejercicio 9 bis
+
+/*idem al 9 pero se pide el porcentaje por prompt... 
+y se hace todo lo necesario para que funcione*/
+
+/*Debemos lograr tomar el importe por ID ,
 transformarlo a entero (parseInt), luego
 mostrar el importe con un aumento del 10 %
 en el cuadro de texto "RESULTADO".*/
+
 function mostrarAumento()
-{	
+{	//declaro variable
 	var sueldo;
+	var aumento;
 	var resultado;
 	var porcentaje;
-	
 
-	porcentaje = prompt("Ingrese un porcentaje");
+	//asigno valores
+	sueldo = document.getElementById("txtIdSueldo").value;
+	sueldo = parseInt(sueldo);
 
-	sueldo = document.getElementById("txtIdSueldo");
+	porcentaje = prompt("Ingrese un porcentaje : ");
+	porcentaje = parseInt(porcentaje);
 
-	sueldo = parseInt(document.getElementById("txtIdSueldo").value);
-	
+	//realizo operaciones
+	aumento = (sueldo * porcentaje)/100;
+	resultado = sueldo + aumento;
+
+	//desarrollo respuesta
 	document.getElementById("txtIdResultado").value = resultado;
 
-	resultado = (sueldo * porcentaje / 100) + sueldo;
-	document.getElementById("txtIdResultado").value = "Resultado" + resultado;
 
-
+	
+	/*sueldo=document.getElementById("txtIdSueldo").value;
+	sueldo=parseInt(sueldo);
+	
+	aumento=(sueldo* 10)/100;
+	resultado= sueldo +  aumento;
+	
+	document.getElementById("txtIdResultado").value=resultado;*/
 	
 }

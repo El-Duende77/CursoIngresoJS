@@ -4,9 +4,8 @@ y luego mostrarlo por 'Alert' al presionar el botón  'mostrar'*/
 function mostrar()
 {
 	var nombre;
-	nombre = document.getElementById("txtIdNombre").value;
-	//nombre = txtIdNombre.value
-	alert(nombre)
+	nombre=document.getElementById("txtIdNombre").value;
+	alert("El nombre es : " + nombre);
 
 }
 

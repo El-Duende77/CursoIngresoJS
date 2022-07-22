@@ -4,67 +4,89 @@ B.	Ingresar tres precios de productos y mostrar el promedio de los mismos.
 C.	ingresar tres precios de productos  y mostrar precio final (más IVA 21%).
 */
 function Sumar () 
-{   /*var precioUno;
-    var precioDos;
-    var precioTres;
+{   //declaro variables
+    var numeroUno;
+    var numeroDos;
+    var numeroTres;
     var resultado;
+    var respuesta;
 
-    precioUno = document.getElementById("txtIdPrecioUno").value;
-    precioUno = parseInt(precioUno);
+    //asigno valores
+    numeroUno=document.getElementById("txtIdPrecioUno").value;
+    numeroUno=parseInt(numeroUno);
 
-    precioDos = document.getElementById("txtIdPrecioDos").value;
-    precioDos = parseInt(precioDos);
+    numeroDos=document.getElementById("txtIdPrecioDos").value;
+    numeroDos=parseInt(numeroDos);
 
-    precioTres = document.getElementById("txtIdPrecioTres").value;
-    precioTres = parseInt(precioTres);
+    numeroTres=document.getElementById("txtIdPrecioTres").value;
+    numeroTres=parseInt(numeroTres);
 
-    resultado = precioUno + precioDos + precioTres;
+    //realizo operaciones
+    resultado=numeroUno+numeroDos+numeroTres;
 
-    alert("El resultado es : " + resultado);*/
-	
+    //respuesta
+    respuesta = "El resultado es : " + resultado;
 
+    alert(respuesta);
+    
 }
+
 function Promedio () 
-{   /*var precioUno;
-    var precioDos;
-    var precioTres;
+{   //declaro variables
+    var numeroUno;
+    var numeroDos;
+    var numeroTres;
     var promedio;
+    var respuesta;
+
+    //asigno valores
+    numeroUno = document.getElementById("txtIdPrecioUno").value;
+    numeroUno = parseFloat(numeroUno);
+
+    numeroDos = document.getElementById("txtIdPrecioDos").value;
+    numeroDos = parseFloat(numeroDos);
+
+    numeroTres = document.getElementById("txtIdPrecioTres").value;
+    numeroTres = parseFloat(numeroTres);
+
+    //realizo operaciones
+    promedio = (numeroUno+numeroDos+numeroTres)/3;
+
+    respuesta = "El resultado es : " + promedio;
+
+    alert(respuesta);
     
-
-    precioUno = document.getElementById("txtIdPrecioUno").value;
-    precioUno = parseInt(precioUno);
-
-    precioDos = document.getElementById("txtIdPrecioDos").value;
-    precioDos = parseInt(precioDos);
-
-    precioTres = document.getElementById("txtIdPrecioTres").value;
-    precioTres = parseInt(precioTres);
-
-    promedio = (precioUno + precioDos + precioTres) / 3;
-    
-
-    alert("El promedio es : " + promedio);*/
-	
 }
 function PrecioFinal () 
-{   var precioUno;
-    var precioDos;
-    var precioTres;
-    var resultado;
-
-    precioUno = document.getElementById("txtIdPrecioUno").value;
-    precioUno = parseInt(precioUno);
-
-    precioDos = document.getElementById("txtIdPrecioDos").value;
-    precioDos = parseInt(precioDos);
-
-    precioTres = document.getElementById("txtIdPrecioTres").value;
-    precioTres = parseInt(precioTres);
-
-    resultado = (precioUno + precioDos + precioTres);
-    resultado = resultado * 1.21;
+{   //declaro variables
+    var numeroUno;
+    var numeroDos;
+    var numeroTres;
+    var porcentaje;
+    var precioFinal;
+    var respuesta;
+    var suma;
     
+    //asigno valores
+    numeroUno = document.getElementById("txtIdPrecioUno").value;
+    numeroUno = parseFloat(numeroUno);
 
-    alert("El precio con i.v.a. es : " + resultado);
-	
+    numeroDos = document.getElementById("txtIdPrecioDos").value;
+    numeroDos = parseFloat(numeroDos);
+
+    numeroTres = document.getElementById("txtIdPrecioDos").value;
+    numeroTres = parseFloat(numeroTres);
+
+    //realizo las operaciones
+    suma = numeroUno + numeroDos + numeroTres;
+    
+    porcentaje = (suma * 21) /100;
+
+    precioFinal = suma + porcentaje;
+
+    //respuesta
+    respuesta = "El precio final es : " + precioFinal;
+
+    alert(respuesta);
+
 }

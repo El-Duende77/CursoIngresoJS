@@ -1,6 +1,18 @@
-function mostrar()
-{
-	//tomo la edad  
-	alert("ok");
+//Al ingresar una edad que sea igual a 15, mostrar el mensaje "niña bonita"
 
-}//FIN DE LA FUNCIÓN
+function mostrar()
+{	
+	//Declaro variables
+	var edad;
+	var mensaje;
+
+	edad = document.getElementById("txtIdEdad").value;
+	edad = parseInt(edad);
+
+	//inicio con el condicional luego hago la logica
+	if (edad == 15) {	
+		mensaje = "Niña bonita";
+	}
+	
+	alert(mensaje);
+}	
